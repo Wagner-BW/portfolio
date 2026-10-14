@@ -1,31 +1,44 @@
 
 (() => {
   const progress = document.getElementById("progress");
-  const hero = document.querySelector(".hero");
-  let ticking = false;
+  const sections = [...document.querySelectorAll(".project-section")];
+  const links = [...document.querySelectorAll(".toc-link")];
 
-  function updateScrollEffects() {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  function updateProgress() {
+    const root = document.documentElement;
+    const maxScroll = root.scrollHeight - window.innerHeight;
+    const amount = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
 
-    if (progress) {
-      progress.style.width =
-        `${maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 0}%`;
-    }
-
-    if (hero && scrollTop < hero.offsetHeight + 200) {
-      hero.style.setProperty("--parallax-y", `${scrollTop * 0.12}px`);
-    }
-
-    ticking = false;
+    if (progress) progress.style.width = `${amount}%`;
   }
 
+  function updateActiveSection() {
+    let activeId = sections[0]?.id;
+
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top < window.innerHeight * 0.45) {
+        activeId = section.id;
+      }
+    }
+
+    links.forEach(link => {
+      const active = link.getAttribute("href") === `#${activeId}`;
+      link.classList.toggle("active", active);
+    });
+  }
+
+  let ticking = false;
   window.addEventListener("scroll", () => {
     if (!ticking) {
-      window.requestAnimationFrame(updateScrollEffects);
+      window.requestAnimationFrame(() => {
+        updateProgress();
+        updateActiveSection();
+        ticking = false;
+      });
       ticking = true;
     }
   }, { passive: true });
 
-  updateScrollEffects();
+  updateProgress();
+  updateActiveSection();
 })();
