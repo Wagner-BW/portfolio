@@ -4,7 +4,7 @@
 :root {
   --blue: #244c75;
   --blue-muted: #718ba5;
-  --cream: #f2eee5;
+  --grey: #f7f7f7;
   --white: #ffffff;
   --ink: #1b2734;
   --muted: #7b828a;
@@ -26,7 +26,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--cream);
+  background: var(--grey);
   color: var(--ink);
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
