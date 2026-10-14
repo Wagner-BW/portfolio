@@ -3,284 +3,266 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f5f3ed">
-  <meta
-    name="description"
-    content="A portfolio of ongoing projects, hands-on design, and artwork."
-  >
-  <title>Portfolio — Projects & Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2eee5">
+  <meta name="description" content="A portfolio of projects, hands-on design, and artwork.">
+  <title>Portfolio — BW</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
-  <div class="site-shell">
+  <div class="progress" aria-hidden="true">
+    <span></span>
+  </div>
 
-    <!-- LEFT NAVIGATION -->
-    <aside class="sidebar">
-      <a class="brand" href="#top" aria-label="Back to top">BW.</a>
+  <aside class="sidebar">
+    <a class="wordmark" href="#top" aria-label="Back to top">
+      BW<span>.</span>
+    </a>
 
-      <p class="sidebar-label">PORTFOLIO</p>
+    <p class="side-label">PORTFOLIO / 2026</p>
 
-      <nav class="toc" aria-label="Table of contents">
-        <a href="#product" class="toc-link active">
-          <span>01</span> Project WIP
-        </a>
-
-        <a href="#making" class="toc-link">
-          <span>02</span> Hands-on Design
-        </a>
-
-        <a href="#experiments" class="toc-link">
-          <span>03</span> Other Artwork
-        </a>
-      </nav>
-
-      <a class="contact-link" href="mailto:YOUR-EMAIL@example.com">
-        Get in touch <span>↗</span>
+    <nav class="toc" aria-label="Table of contents">
+      <a href="#product" class="toc-link active">
+        <span>01</span> Project WIP
       </a>
+      <a href="#making" class="toc-link">
+        <span>02</span> Hands-on Design
+      </a>
+      <a href="#experiments" class="toc-link">
+        <span>03</span> Other Artwork
+      </a>
+    </nav>
 
-      <div class="sidebar-bottom">
-        <span>DESIGN / MAKING / ART</span>
-      </div>
-    </aside>
+    <div class="sidebar-bottom">
+      <p class="location">DESIGN · MAKING · ART</p>
+      <a href="mailto:YOUR-EMAIL@example.com">Get in touch ↗</a>
+    </div>
+  </aside>
 
-    <!-- MAIN CONTENT -->
-    <main id="top" class="main-content">
+  <main class="main" id="top">
+    <header class="topbar">
+      <span>SELECTED WORK</span>
+      <span>SPORT / PRODUCT / PROCESS</span>
+    </header>
 
-      <header class="topbar">
-        <span>SELECTED WORK</span>
-        <span>PORTFOLIO / 2026</span>
-      </header>
-
-      <!-- 01 / PROJECT WIP -->
-      <section id="product" class="portfolio-section">
-        <div class="section-heading">
+    <!-- 01 / PROJECT WIP -->
+    <section class="project-section" id="product">
+      <div class="section-head">
+        <div>
           <p class="eyebrow">01 / PROJECT WIP</p>
-          <span class="section-mark">01</span>
-        </div>
-
-        <div class="project-intro">
           <h1>Running-form vest</h1>
-          <p class="caption-placeholder">
-            <!-- Add a short project description here. -->
-            [Project caption]
-          </p>
         </div>
+        <span class="status">IN PROGRESS</span>
+      </div>
 
-        <!-- HERO IMAGE -->
-        <figure class="hero-image media-frame">
-          <img
-            src="media/hero-running.jpg"
-            alt="Running-form vest project"
-          >
-          <figcaption>
-            [Add image caption]
+      <figure class="image-frame hero-image">
+        <img
+          src="media/hero-running.jpg"
+          alt="Running-form vest project"
+          fetchpriority="high"
+        >
+        <span class="image-index">01 / FEATURE</span>
+      </figure>
+      <p class="caption">[Add a short caption for the main image]</p>
+
+      <div class="project-notes">
+        <div>
+          <p class="eyebrow">CONCEPT</p>
+          <p>[Describe the idea or problem you are exploring.]</p>
+        </div>
+        <div>
+          <p class="eyebrow">PROCESS</p>
+          <p>[Add notes about your design, testing, or next steps.]</p>
+        </div>
+      </div>
+
+      <div class="image-grid two-columns">
+        <figure class="work-card">
+          <div class="image-frame work-image">
+            <img
+              src="media/running-vest-1.jpg"
+              alt="Running-form vest concept image"
+              loading="lazy"
+            >
+          </div>
+          <figcaption class="work-caption">
+            <h2>[Concept / sketch title]</h2>
+            <p>[Add a short caption.]</p>
           </figcaption>
         </figure>
 
-        <!-- PROJECT CONCEPT / PROCESS -->
-        <div class="project-grid">
-          <div class="project-copy">
-            <p class="eyebrow">CONCEPT</p>
-            <p class="placeholder-text">
-              [Add concept notes here]
-            </p>
-          </div>
-
-          <div class="project-copy">
-            <p class="eyebrow">PROCESS</p>
-            <p class="placeholder-text">
-              [Add process notes here]
-            </p>
-          </div>
-        </div>
-
-        <!-- CONCEPT ART / PROJECT IMAGES -->
-        <div class="image-grid">
-          <figure class="media-frame">
+        <figure class="work-card">
+          <div class="image-frame work-image">
             <img
-              src="media/running-vest-concept.jpg"
-              alt="Running-form vest concept artwork"
-              loading="lazy"
-            >
-            <figcaption>[Concept art caption]</figcaption>
-          </figure>
-
-          <figure class="media-frame">
-            <img
-              src="media/running-vest-process.jpg"
+              src="media/running-vest-2.jpg"
               alt="Running-form vest design process"
               loading="lazy"
             >
-            <figcaption>[Process image caption]</figcaption>
-          </figure>
-        </div>
-
-        <!-- EMBEDDED PROJECT PDFs -->
-        <div class="pdf-section">
-          <div class="subsection-heading">
-            <p class="eyebrow">PROJECT DOCUMENTATION</p>
-            <span>PDF</span>
           </div>
+          <figcaption class="work-caption">
+            <h2>[Design process]</h2>
+            <p>[Add a short caption.]</p>
+          </figcaption>
+        </figure>
+      </div>
 
-          <div class="pdf-grid">
-            <article class="pdf-card">
-              <div class="pdf-header">
-                <span>01 / DOCUMENT</span>
-                <a
-                  href="media/running-vest-1.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >Open ↗</a>
-              </div>
-
-              <iframe
-                src="media/running-vest-1.pdf"
-                title="Running-form vest document one"
-                loading="lazy"
-              ></iframe>
-
-              <p class="pdf-caption">[Document caption]</p>
-            </article>
-
-            <article class="pdf-card">
-              <div class="pdf-header">
-                <span>02 / DOCUMENT</span>
-                <a
-                  href="media/running-vest-2.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >Open ↗</a>
-              </div>
-
-              <iframe
-                src="media/running-vest-2.pdf"
-                title="Running-form vest document two"
-                loading="lazy"
-              ></iframe>
-
-              <p class="pdf-caption">[Document caption]</p>
-            </article>
+      <div class="pdf-grid">
+        <article class="pdf-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">DOCUMENT 01</p>
+              <h2>[PDF title]</h2>
+            </div>
+            <a href="media/running-vest-1.pdf" target="_blank"
+               rel="noopener noreferrer">Open ↗</a>
           </div>
-        </div>
+          <iframe
+            src="media/running-vest-1.pdf"
+            title="Running-form vest document one"
+            loading="lazy"
+          ></iframe>
+          <p class="caption">[Add a short document caption]</p>
+        </article>
 
-        <div class="project-status">
-          <span class="status-dot"></span>
-          <span>Work in progress</span>
-        </div>
-      </section>
+        <article class="pdf-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">DOCUMENT 02</p>
+              <h2>[PDF title]</h2>
+            </div>
+            <a href="media/running-vest-2.pdf" target="_blank"
+               rel="noopener noreferrer">Open ↗</a>
+          </div>
+          <iframe
+            src="media/running-vest-2.pdf"
+            title="Running-form vest document two"
+            loading="lazy"
+          ></iframe>
+          <p class="caption">[Add a short document caption]</p>
+        </article>
+      </div>
 
-      <!-- 02 / HANDS-ON DESIGN -->
-      <section id="making" class="portfolio-section">
-        <div class="section-heading">
+      <div class="prototype-panel">
+        <p class="prototype-label">PROJECT STATUS<span>01 / CURRENT</span></p>
+        <div>
+          <h2>Work in progress</h2>
+          <p>[Add a brief update on what you are working on next.]</p>
+        </div>
+        <span class="status">ONGOING</span>
+      </div>
+    </section>
+
+    <div class="section-divider"><span></span></div>
+
+    <!-- 02 / HANDS-ON DESIGN -->
+    <section class="project-section" id="making">
+      <div class="section-head">
+        <div>
           <p class="eyebrow">02 / HANDS-ON DESIGN</p>
-          <span class="section-mark">02</span>
+          <h1>Hands-on design</h1>
         </div>
+        <span class="section-count">02</span>
+      </div>
 
-        <div class="project-intro">
-          <h2>Hands-on design</h2>
-          <p class="caption-placeholder">
-            [Section caption]
-          </p>
-        </div>
+      <p class="section-intro">[Add a short introduction, or leave this blank.]</p>
 
-        <!-- ADD OR REPLACE IMAGES AS NEEDED -->
-        <div class="image-grid">
-          <figure class="media-frame">
+      <div class="image-grid two-columns">
+        <figure class="work-card">
+          <div class="image-frame work-image">
             <img
               src="media/sewing-1.jpg"
               alt="Hands-on design project"
               loading="lazy"
             >
-            <figcaption>[Project name / caption]</figcaption>
-          </figure>
+          </div>
+          <figcaption class="work-caption">
+            <h2>[Project title]</h2>
+            <p>[Materials, methods, or project caption]</p>
+          </figcaption>
+        </figure>
 
-          <figure class="media-frame">
+        <figure class="work-card">
+          <div class="image-frame work-image">
             <img
               src="media/sewing-2.jpg"
-              alt="Making and construction process"
+              alt="Design and construction detail"
               loading="lazy"
             >
-            <figcaption>[Process / material caption]</figcaption>
-          </figure>
-        </div>
-
-        <div class="project-grid">
-          <div class="project-copy">
-            <p class="eyebrow">PROJECT</p>
-            <p class="placeholder-text">
-              [Add project title or description]
-            </p>
           </div>
+          <figcaption class="work-caption">
+            <h2>[Project title]</h2>
+            <p>[Materials, methods, or project caption]</p>
+          </figcaption>
+        </figure>
+      </div>
 
-          <div class="project-copy">
-            <p class="eyebrow">MATERIALS / METHODS</p>
-            <p class="placeholder-text">
-              [Add materials, tools, or techniques]
-            </p>
-          </div>
-        </div>
-      </section>
+      <!-- Duplicate a work-card to add another project. -->
+    </section>
 
-      <!-- 03 / OTHER ARTWORK -->
-      <section id="experiments" class="portfolio-section">
-        <div class="section-heading">
+    <div class="section-divider"><span></span></div>
+
+    <!-- 03 / OTHER ARTWORK -->
+    <section class="project-section" id="experiments">
+      <div class="section-head">
+        <div>
           <p class="eyebrow">03 / OTHER ARTWORK</p>
-          <span class="section-mark">03</span>
+          <h1>Other artwork</h1>
         </div>
+        <span class="section-count">03</span>
+      </div>
 
-        <div class="project-intro">
-          <h2>Other artwork</h2>
-          <p class="caption-placeholder">
-            [Section caption]
-          </p>
-        </div>
-
-        <!-- ARTWORK GALLERY -->
-        <div class="artwork-grid">
-          <figure class="media-frame">
+      <div class="image-grid three-columns">
+        <figure class="work-card">
+          <div class="image-frame work-image">
             <img
               src="media/personal-1.jpg"
               alt="Artwork one"
               loading="lazy"
             >
-            <figcaption>[Artwork title / medium]</figcaption>
-          </figure>
+          </div>
+          <figcaption class="work-caption">
+            <h2>[Artwork title]</h2>
+            <p>[Medium / caption]</p>
+          </figcaption>
+        </figure>
 
-          <figure class="media-frame">
+        <figure class="work-card">
+          <div class="image-frame work-image">
             <img
               src="media/personal-2.jpg"
               alt="Artwork two"
               loading="lazy"
             >
-            <figcaption>[Artwork title / medium]</figcaption>
-          </figure>
+          </div>
+          <figcaption class="work-caption">
+            <h2>[Artwork title]</h2>
+            <p>[Medium / caption]</p>
+          </figcaption>
+        </figure>
 
-          <figure class="media-frame">
+        <figure class="work-card">
+          <div class="image-frame work-image">
             <img
               src="media/personal-3.jpg"
               alt="Artwork three"
               loading="lazy"
             >
-            <figcaption>[Artwork title / medium]</figcaption>
-          </figure>
-        </div>
-      </section>
+          </div>
+          <figcaption class="work-caption">
+            <h2>[Artwork title]</h2>
+            <p>[Medium / caption]</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
 
-      <!-- FOOTER -->
-      <footer class="site-footer">
-        <a class="brand" href="#top">BW.</a>
-
-        <a href="mailto:YOUR-EMAIL@example.com">
-          Get in touch ↗
-        </a>
-
-        <span>END OF PORTFOLIO</span>
-      </footer>
-
-    </main>
-  </div>
+    <footer class="page-footer">
+      <a class="footer-mark" href="#top">BW.</a>
+      <span>END OF PORTFOLIO</span>
+      <a href="mailto:YOUR-EMAIL@example.com">GET IN TOUCH ↗</a>
+    </footer>
+  </main>
 </body>
 </html>
