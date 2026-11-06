@@ -714,6 +714,22 @@ figure {
     font-size: 16px;
   }
 }
+/* Horizontal scrolling project galleries */
+.photo-gallery {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+}
+
+.photo-gallery img {
+  flex: 0 0 100%;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
 
 /* REDUCED MOTION ACCESSIBILITY */
 
