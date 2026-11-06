@@ -715,37 +715,35 @@ figure {
   }
 }
 
+
 /* Independent horizontal project galleries */
 
 .photo-gallery {
   display: flex;
   width: 100%;
-  gap: 12px;
+  gap: 0;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa transparent;
 }
 
 .photo-gallery img {
-  display: block;
   flex: 0 0 100%;
   width: 100%;
   height: 320px;
-  object-fit: cover;
+  object-fit: contain;
   scroll-snap-align: start;
-  border-radius: 4px;
 }
 
-/* Keep each project card aligned */
+/* Keep project cards aligned */
 .work-card {
   min-width: 0;
   align-self: start;
 }
 
-/* Scrollbar appearance */
 .photo-gallery::-webkit-scrollbar {
   height: 5px;
 }
